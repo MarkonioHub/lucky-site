@@ -1,0 +1,31 @@
+section.contacts
+  .contacts__cont.cont
+    .contacts__area
+      .contacts__box
+        h2.contacts__title.title Контакты
+        .contacts__subtitle Адрес
+        .contacts__item
+          img.contacts__icon(src=staticImg('ic_address_blue.svg') alt='')
+          .contacts__name!= 'г. Краснодар <br> ул. Бабушкина 110, офис 4'
+        .contacts__subtitle Контакты
+        a.contacts__item(href='mailto:ra-matina@mail.ru')
+          img.contacts__icon(src=staticImg('ic_email_blue.svg') alt='')
+          .contacts__name ra-matina@mail.ru
+        a.contacts__item(href='tel:88612463336')
+          img.contacts__icon(src=staticImg('ic_phone_blue.svg') alt='')
+          .contacts__name 8 (861) 246-33-36
+        a.contacts__item(href='tel:89014904646')
+          img.contacts__icon(src=staticImg('ic_phone_blue.svg') alt='')
+          .contacts__name 8 (901) 490-46-46
+      form.contacts__form(data-element="contacts__form")
+        img.contacts__decor(src=staticImg('ic_contacts_decor.svg') alt='')
+        .contacts__headline Заказать звонок
+        label.contacts__label
+          input.contacts__input.input(type='text' placeholder='Имя' name='name' data-role="form-validate-name")
+        label.contacts__label
+          input.contacts__input.input(type='tel' placeholder='Номер телефона' name='phone' data-role="form-validate-phone")
+        label.contacts__checkbox
+          input.contacts__checkbox-input(type='checkbox' name='policy' checked data-role="form-validate-policy")
+          .contacts__checkbox-view
+          .contacts__checkbox-text Согласие на обработку персональных данных
+        button.contacts__submit.btn-pink Отправить

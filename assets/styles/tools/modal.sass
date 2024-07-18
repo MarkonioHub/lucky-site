@@ -1,0 +1,64 @@
+.modal
+  display: flex
+  position: fixed
+  z-index: 1000
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  overflow-y: auto
+  opacity: 0
+  pointer-events: none
+  transition-duration: $transition-duration
+  transition-property: opacity
+
+.modal_active
+  opacity: 1
+  pointer-events: all
+
+.modal-layer
+  position: fixed
+  z-index: -1
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  background: rgba($black, 0.5)
+  cursor: pointer
+
+.modal-wrap
+  margin: auto
+  width: 655px
+  padding: 20px
+
+.modal-content
+  position: relative
+  z-index: 1
+  background: $light-blue
+  border-radius: 32px
+  padding: 80px 36px
+  @include media(xs)
+    padding: 80px 18px
+    border-radius: 16px
+
+.modal-close
+  position: absolute
+  z-index: 1
+  top: 0
+  right: 0
+  width: 90px
+  height: 90px
+  opacity: 0.4
+  transition-duration: $transition-duration
+  transition-property: opacity
+  &:hover
+    opacity: 1
+  &::before
+    content: ''
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%,-50%)
+    width: 26px
+    height: 26px
+    +bgIcon('ic_close_modal.svg')

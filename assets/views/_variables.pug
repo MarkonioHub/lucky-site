@@ -1,0 +1,10 @@
+-
+  const pathStatics = PRODUCTION ? 'statics' : '/statics'
+
+  function staticImg (image) {
+    return `${pathStatics}/img/${image}`
+  }
+
+  const pages = [
+    { view: 'index', name: 'главная' },
+  ]

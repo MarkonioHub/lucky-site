@@ -1,0 +1,40 @@
+.modal-thanks
+  text-align: center
+
+.modal-thanks__icon
+  margin-top: 100px
+  margin-bottom: 79px
+  display: flex
+  justify-content: center
+  path
+    stroke-dasharray: 150
+    stroke-dashoffset: 150
+    @keyframes modalThanksIconCheck
+      0%
+        stroke-dashoffset: 150
+      50%
+        stroke-dashoffset: 150
+      100%
+        stroke-dashoffset: 0
+  svg
+    transform-origin: center
+    @keyframes modalThanksIconCircle
+      0%
+        transform: scale(0)
+      50%
+        transform: scale(1)
+      100%
+        transform: scale(1)
+
+.modal-thanks__title
+  margin-bottom: 20px
+  font-size: 36px
+  line-height: 105%
+
+.modal-thanks__text
+  max-width: 410px
+  margin: 0 auto
+  opacity: 0.7
+  font-size: 16px
+  line-height: 140%
+

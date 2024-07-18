@@ -1,0 +1,25 @@
+.wrapper
+  position: relative
+  z-index: 2
+  flex-grow: 1
+  display: flex
+  flex-direction: column
+
+.cont
+  margin: 0 auto
+  width: 100%
+  max-width: calc(1920px + 80px + 80px)
+  padding: 0 80px
+  @include media(xl)
+    max-width: calc(1296px + 72px + 72px)
+  @include media(lg)
+    padding: 0 20px
+    max-width: calc(720px + 24px + 24px)
+
+.title
+  font-weight: 800
+  font-size: 56px
+  line-height: 111%
+  color: #131415
+  @include media(lg)
+    font-size: 36px

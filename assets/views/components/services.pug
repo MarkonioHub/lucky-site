@@ -1,0 +1,48 @@
+-
+  const servicesTabs = [
+    { icon: 'ic_services_tab_1', name: 'Услуги дизайна' },
+    { icon: 'ic_services_tab_2', name: 'Изготовление рекламной продукции' },
+    { icon: 'ic_services_tab_3', name: 'Изготовление вывесок и флагов' },
+    { icon: 'ic_services_tab_4', name: 'Прочие услуги' },
+  ]
+  const servicesArea = [
+    'В штате нашего рекламного агентства трудятся только профессиональные дизайнеры. Макет разрабатывается с учетом индивидуальных особенностей и пожеланий клиента. Поможем разработать <b>дизайн баннеров, вывесок, флагов а также фирменный стиля и именную продукцию компании.</b>',
+    'Изготовление рекламной продукции текст',
+    'Изготовление вывесок и флагов текст',
+    'Прочие услуги текст',
+  ]
+
+section.services
+  .services__cont.cont
+    h2.services__title.title Изготовление
+    .services__tabs
+      each tab, index in servicesTabs
+        .services__tab(class = index === 0 ? 'services__tab_active' : false data-element="services__tab")
+          img.services__icon(src=staticImg(`${tab.icon}.svg`) alt='')
+          .services__tab-inner
+            .services__name= tab.name
+            button.services__button
+    each area, index in servicesArea
+      .services__area(class = index === 0 ? 'services__area_active' : false data-element="services__area")
+        .services__box
+          p.services__text!= area
+          .services__tag Предоплата
+          ul.services__list
+            li.services__item Согласование стоимости работ
+            li.services__item!= '<b>50%</b> Предоплата'
+            li.services__item Приступаем к работе
+          .services__tag Разработка и правки
+          ul.services__list
+            li.services__item!= 'Часовая ставка <b>- 1200 р/час</b>'
+            li.services__item!= 'Один макет <b>- 3000 р.</b>'
+            li.services__item!= '<b>Одна</b> итерация правок <b>- 500 р.</b>'
+          button.services__submit.btn-pink Заказать
+        .services__slider(data-element="services__slider")
+          .services__nav.services__nav_left
+          .services__nav.services__nav_right
+          .services__pagination
+          .services__wrapper.swiper-wrapper
+            each item in [1,2,3,4]
+              .services__slide.swiper-slide
+                picture.services__picture
+                  img.services__image(src=staticImg('services/services-1.png') alt='')

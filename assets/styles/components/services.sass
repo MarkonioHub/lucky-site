@@ -1,0 +1,197 @@
+.services
+  padding: 109px 0 88px
+  @include media(xs)
+    padding: 40px 0
+
+.services__cont
+
+.services__title
+  margin-bottom: 80px
+  @include media(xs)
+    margin-bottom: 40px
+
+.services__tabs
+  margin-bottom: 38px
+  display: flex
+  gap: 24px
+  @include media(lg)
+    overflow-y: auto
+    padding: 40px 0
+
+.services__tab
+  cursor: pointer
+  padding: 1px
+  position: relative
+  width: calc(25% - 12px)
+  min-height: 173px
+  border-radius: 32px
+  background: linear-gradient(90deg, #D74596 0%, #F2464E 37%, #857ADD 69%, #0192DE 100%)
+  @include media(lg)
+    width: 280px
+    flex-shrink: 0
+
+.services__tab_active
+  padding: 2px
+  .services__tab-inner, .services__icon
+    background: $light-blue
+  .services__button
+    +bgIcon('ic_services_tab_close.svg')
+
+.services__icon
+  position: absolute
+  left: 32px
+  top: -40px
+  width: 72px
+  height: 72px
+  background-color: $white
+  border-radius: 50%
+
+.services__tab-inner
+  padding: 46px 40px
+  background-color: $white
+  border-radius: 32px
+  display: flex
+  align-items: center
+  height: 100%
+  @include media(xl)
+    padding: 20px
+
+.services__name
+  flex-grow: 1
+  font-weight: 700
+  font-size: 24px
+  line-height: 131%
+
+.services__button
+  width: 48px
+  height: 48px
+  flex-shrink: 0
+  margin-left: 32px
+  +bgIcon('ic_services_tab_open.svg')
+
+.services__area
+  display: none
+  align-items: center
+  justify-content: space-between
+
+.services__area_active
+  display: flex
+  @include media(lg)
+    display: block
+
+.services__box
+  max-width: 932px
+  width: 100%
+  @include media(lg)
+    max-width: 100%
+
+.services__text
+  max-width: 654px
+  width: 100%
+  font-size: 20px
+  line-height: 160%
+  @include media(lg)
+    max-width: 100%
+
+.services__tag
+  margin-top: 40px
+  margin-bottom: 17px
+  display: inline-block
+  font-size: 14px
+  line-height: 143%
+  color: #fff
+  padding: 3px 9px
+  background: linear-gradient(41deg, #d74596 0.01%, #f2464e 36.59%, #857add 68.58%, #0192de 100%)
+  border-radius: 27px
+
+.services__list
+
+.services__item
+  position: relative
+  font-size: 20px
+  line-height: 140%
+  padding-left: 30px
+  &::before
+    content: ''
+    width: 4px
+    height: 4px
+    border-radius: 50%
+    background-color: $dark
+    position: absolute
+    left: 12px
+    top: 11px
+
+.services__submit
+  margin-top: 40px
+
+.services__slider
+  position: relative
+  overflow: hidden
+  max-width: 708px
+  width: 100%
+  flex-shrink: 0
+  margin-left: 100px
+  box-shadow: 0 8px 40px 0 rgba(172, 178, 184, 0.32)
+  border-radius: 60px
+  @include media(xl)
+    max-width: 600px
+    margin-left: 50px
+  @include media(lg)
+    max-width: 100%
+    margin-left: 0
+    margin-top: 50px
+
+.services__nav
+  position: absolute
+  z-index: 10
+  top: 50%
+  transform: translateY(-50%)
+  background-color: $white
+  border-radius: 50%
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 62px
+  height: 62px
+  box-shadow: 0 8px 40px 0 rgba(172, 178, 184, 0.32)
+  &::before
+    content: ''
+    +bgIcon('ic_chevron_right_red.svg')
+    width: 24px
+    height: 24px
+
+.services__nav_left
+  left: 28px
+  transform: translateY(-50%) rotate(180deg)
+
+.services__nav_right
+  right: 28px
+
+.services__pagination
+  position: absolute
+  z-index: 10
+  bottom: 40px !important
+  left: 0
+  right: 0
+  display: flex
+  align-items: center
+  justify-content: center
+  .swiper-pagination-bullet
+    margin: 0 7px !important
+    width: 16px
+    height: 16px
+    background-color: $white
+    opacity: 1
+  .swiper-pagination-bullet-active
+    width: 20px
+    height: 20px
+    background-color: $blue
+
+.services__wrapper
+
+.services__slide
+
+.services__picture
+
+.services__image
+  border-radius: 60px

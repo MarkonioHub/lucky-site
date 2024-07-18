@@ -1,0 +1,130 @@
+.contacts
+
+.contacts__cont
+
+.contacts__area
+  display: flex
+  align-items: center
+  justify-content: space-between
+  padding: 96px 80px 130px 80px
+  background: $light-blue
+  overflow: hidden
+  @include media(xl)
+    padding: 50px
+  @include media(lg)
+    display: block
+    padding: 20px
+
+.contacts__box
+  margin-right: 100px
+  margin-top: -16px
+  @include media(xl)
+    margin-top: 0
+    margin-right: 50px
+  @include media(lg)
+    margin-right: 0
+
+.contacts__title
+
+.contacts__subtitle
+  margin-top: 46px
+  margin-bottom: 2px
+  font-size: 16px
+  line-height: 237%
+  color: rgba(28, 31, 35, 0.64)
+  @include media(lg)
+    margin-top: 20px
+
+.contacts__item
+  display: flex
+  text-decoration: none
+  &:hover
+    text-decoration: underline
+  &:not(:last-of-type)
+    margin-bottom: 8px
+
+.contacts__icon
+  margin-top: 8px
+  margin-right: 16px
+  width: 32px
+  height: 32px
+  flex-shrink: 0
+
+.contacts__name
+  font-weight: 700
+  font-size: 32px
+  line-height: 131%
+  @include media(xs)
+    font-size: 18px
+
+.contacts__form
+  position: relative
+  min-height: 581px
+  max-width: 1090px
+  width: 100%
+  padding: 92px 70px
+  box-shadow: 0 8px 40px 0 rgba(172, 178, 184, 0.32)
+  background: #fff
+  border-radius: 32px
+  @include media(xl)
+    padding: 50px
+    max-width: 700px
+  @include media(lg)
+    padding: 20px
+    max-width: 100%
+    margin-top: 40px
+    min-height: auto
+
+.contacts__decor
+  position: absolute
+  right: -219px
+  top: 0
+  height: 100%
+  width: 579px
+  @include media(lg)
+    display: none
+
+.contacts__headline
+  margin-bottom: 64px
+  font-weight: 800
+  font-size: 32px
+  line-height: 119%
+  @include media(lg)
+    margin-bottom: 32px
+    font-size: 24px
+
+.contacts__label
+  &:not(:last-of-type)
+    margin-bottom: 32px
+
+.contacts__input
+
+.contacts__checkbox
+  margin-bottom: 39px
+  display: flex
+  cursor: pointer
+
+.contacts__checkbox-input
+  display: none
+  &:checked ~ .contacts__checkbox-view
+    background-color: $blue
+    +bgIcon('ic_checkbox_active.svg')
+  &.input-error ~ .contacts__checkbox-text
+    color: red
+
+.contacts__checkbox-view
+  margin-right: 8px
+  flex-shrink: 0
+  width: 24px
+  height: 24px
+  border-radius: 6px
+  border: 1px solid $blue
+  transition-property: background-color
+  transition-duration: $transition-duration
+
+.contacts__checkbox-text
+  font-size: 16px
+  line-height: 150%
+
+.contacts__submit
+  padding: 20px 59px
